@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 3.2.2 (Python 3.7.3 on win32)" generated="20210124 16:50:38.318" rpa="false">
+<robot generator="Rebot 3.2.2 (Python 3.7.3 on win32)" generated="20210124 17:16:45.431" rpa="false">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="Amazon" source="C:\RobotPractice\robot-scripts\first-scripts\Tests\Amazon.robot">
 <test id="s1-s1-t1" name="User must sign in to check out">
@@ -9,19 +9,19 @@
 <arg>http://www.amazon.in</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210124 16:49:32.003" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.in'.</msg>
-<status status="PASS" starttime="20210124 16:49:32.002" endtime="20210124 16:49:48.506"></status>
+<msg timestamp="20210124 17:15:52.949" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.in'.</msg>
+<status status="PASS" starttime="20210124 17:15:52.948" endtime="20210124 17:16:25.372"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210124 16:49:48.506" endtime="20210124 16:49:50.642"></status>
+<status status="PASS" starttime="20210124 17:16:25.373" endtime="20210124 17:16:29.968"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>amazon.in</arg>
 </arguments>
-<status status="PASS" starttime="20210124 16:49:50.642" endtime="20210124 16:49:50.722"></status>
+<status status="PASS" starttime="20210124 17:16:29.968" endtime="20210124 17:16:30.281"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -29,46 +29,88 @@
 <arg>id=twotabsearchtextbox</arg>
 <arg>Ferrari 458</arg>
 </arguments>
-<msg timestamp="20210124 16:49:50.723" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210124 16:49:50.722" endtime="20210124 16:49:51.066"></status>
+<msg timestamp="20210124 17:16:30.282" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210124 17:16:30.282" endtime="20210124 17:16:30.552"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>css=[value='Go']</arg>
 </arguments>
-<msg timestamp="20210124 16:49:51.067" level="INFO">Clicking button 'css=[value='Go']'.</msg>
-<status status="PASS" starttime="20210124 16:49:51.067" endtime="20210124 16:49:55.789"></status>
+<msg timestamp="20210124 17:16:30.553" level="INFO">Clicking button 'css=[value='Go']'.</msg>
+<status status="PASS" starttime="20210124 17:16:30.552" endtime="20210124 17:16:33.079"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>results for "Ferrari 458"</arg>
 </arguments>
-<status status="PASS" starttime="20210124 16:49:55.789" endtime="20210124 16:49:56.461"></status>
+<status status="PASS" starttime="20210124 17:16:33.080" endtime="20210124 17:16:33.205"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>xpath = //span[contains(text(),'Deliababy Ferrari 458 Italia, Red')]/parent::a</arg>
 </arguments>
-<msg timestamp="20210124 16:49:56.462" level="INFO">Clicking link 'xpath = //span[contains(text(),'Deliababy Ferrari 458 Italia, Red')]/parent::a'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210124 16:50:38.000" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210124 16:49:56.476" endtime="20210124 16:50:38.001"></status>
+<msg timestamp="20210124 17:16:33.206" level="INFO">Clicking link 'xpath = //span[contains(text(),'Deliababy Ferrari 458 Italia, Red')]/parent::a'.</msg>
+<status status="PASS" starttime="20210124 17:16:33.205" endtime="20210124 17:16:33.999"></status>
 </kw>
-<msg timestamp="20210124 16:50:38.010" level="FAIL">Link with locator 'xpath = //span[contains(text(),'Deliababy Ferrari 458 Italia, Red')]/parent::a' not found.</msg>
-<status status="FAIL" starttime="20210124 16:49:56.461" endtime="20210124 16:50:38.010"></status>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>Buy Deliababy Ferrari 458 Italia, Red Online at Low Prices in India - Amazon.in</arg>
+</arguments>
+<status status="PASS" starttime="20210124 17:16:33.999" endtime="20210124 17:16:36.849"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Back to results</arg>
+</arguments>
+<status status="PASS" starttime="20210124 17:16:36.849" endtime="20210124 17:16:36.902"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20210124 17:16:36.903" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20210124 17:16:36.902" endtime="20210124 17:16:37.188"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" starttime="20210124 17:16:37.188" endtime="20210124 17:16:38.883"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id = hlb-ptc-btn-native</arg>
+</arguments>
+<msg timestamp="20210124 17:16:38.883" level="INFO">Clicking link 'id = hlb-ptc-btn-native'.</msg>
+<status status="PASS" starttime="20210124 17:16:38.883" endtime="20210124 17:16:40.246"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<status status="PASS" starttime="20210124 17:16:40.247" endtime="20210124 17:16:40.287"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210124 17:16:40.288" endtime="20210124 17:16:45.033"></status>
 </kw>
 <doc>This is some basic test</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="FAIL" starttime="20210124 16:49:32.000" endtime="20210124 16:50:38.010" critical="yes">Link with locator 'xpath = //span[contains(text(),'Deliababy Ferrari 458 Italia, Red')]/parent::a' not found.</status>
+<status status="PASS" starttime="20210124 17:15:52.947" endtime="20210124 17:16:45.034" critical="yes"></status>
 </test>
 <doc>This is my first practice robot script</doc>
-<status status="FAIL" starttime="20210124 16:49:31.641" endtime="20210124 16:50:38.012"></status>
+<status status="PASS" starttime="20210124 17:15:52.621" endtime="20210124 17:16:45.035"></status>
 </suite>
 <suite id="s1-s2" name="NopCommerce" source="C:\RobotPractice\robot-scripts\first-scripts\Tests\NopCommerce.robot">
 <test id="s1-s2-t1" name="Login Test">
@@ -78,39 +120,91 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20210124 16:49:32.011" level="FAIL">Variable '${url}' not found.</msg>
-<status status="FAIL" starttime="20210124 16:49:32.008" endtime="20210124 16:49:32.011"></status>
+<msg timestamp="20210124 17:15:52.945" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20210124 17:15:52.944" endtime="20210124 17:16:10.572"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210124 17:16:10.573" endtime="20210124 17:16:12.696"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath = //a[text()='Log in']</arg>
+</arguments>
+<msg timestamp="20210124 17:16:12.697" level="INFO">Clicking link 'xpath = //a[text()='Log in']'.</msg>
+<status status="PASS" starttime="20210124 17:16:12.697" endtime="20210124 17:16:19.274"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>nopCommerce</arg>
+</arguments>
+<status status="PASS" starttime="20210124 17:16:19.274" endtime="20210124 17:16:19.298"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=Email</arg>
+<arg>kchpadhy007@gmail.com</arg>
+</arguments>
+<msg timestamp="20210124 17:16:19.299" level="INFO">Typing text 'kchpadhy007@gmail.com' into text field 'id=Email'.</msg>
+<status status="PASS" starttime="20210124 17:16:19.298" endtime="20210124 17:16:19.416"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=Password</arg>
+<arg>Test@123</arg>
+</arguments>
+<msg timestamp="20210124 17:16:19.417" level="INFO">Typing text 'Test@123' into text field 'id=Password'.</msg>
+<status status="PASS" starttime="20210124 17:16:19.416" endtime="20210124 17:16:19.526"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath = //input[@class='button-1 login-button']</arg>
+</arguments>
+<msg timestamp="20210124 17:16:19.526" level="INFO">Clicking button 'xpath = //input[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20210124 17:16:19.526" endtime="20210124 17:16:19.589"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Computers</arg>
+</arguments>
+<status status="PASS" starttime="20210124 17:16:19.590" endtime="20210124 17:16:19.606"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210124 17:16:19.606" endtime="20210124 17:16:35.010"></status>
 </kw>
 <doc>This is some basic login test</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="FAIL" starttime="20210124 16:49:32.006" endtime="20210124 16:49:32.012" critical="yes">Variable '${url}' not found.</status>
+<status status="PASS" starttime="20210124 17:15:52.943" endtime="20210124 17:16:35.010" critical="yes"></status>
 </test>
 <doc>This is my second practice robot script</doc>
-<status status="FAIL" starttime="20210124 16:49:31.638" endtime="20210124 16:49:32.016"></status>
+<status status="PASS" starttime="20210124 17:15:52.613" endtime="20210124 17:16:35.012"></status>
 </suite>
 <doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
-<status status="FAIL" starttime="20210124 16:49:31.596" endtime="20210124 16:50:38.015"></status>
+<status status="PASS" starttime="20210124 17:15:52.572" endtime="20210124 17:16:45.059"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2">Critical Tests</stat>
-<stat pass="0" fail="2">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="2">Smoke</stat>
+<stat pass="2" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" id="s1" name="Suites">Suites</stat>
-<stat pass="0" fail="1" id="s1-s1" name="Amazon">Suites.Amazon</stat>
-<stat pass="0" fail="1" id="s1-s2" name="NopCommerce">Suites.NopCommerce</stat>
+<stat pass="2" fail="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Amazon">Suites.Amazon</stat>
+<stat pass="1" fail="0" id="s1-s2" name="NopCommerce">Suites.NopCommerce</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210124 16:49:31.585" level="ERROR">Error in file 'C:\RobotPractice\robot-scripts\first-scripts\Tests\NopCommerce.robot' on line 6: Invalid variable name '${browser} chrome'.</msg>
-<msg timestamp="20210124 16:49:31.585" level="ERROR">Error in file 'C:\RobotPractice\robot-scripts\first-scripts\Tests\NopCommerce.robot' on line 7: Invalid variable name '${url} https://demo.nopcommerce.com/'.</msg>
-<msg timestamp="20210124 16:49:31.584" level="ERROR">Error in file 'C:\RobotPractice\robot-scripts\first-scripts\Tests\NopCommerce.robot' on line 6: Invalid variable name '${browser} chrome'.</msg>
-<msg timestamp="20210124 16:49:31.585" level="ERROR">Error in file 'C:\RobotPractice\robot-scripts\first-scripts\Tests\NopCommerce.robot' on line 7: Invalid variable name '${url} https://demo.nopcommerce.com/'.</msg>
 </errors>
 </robot>
